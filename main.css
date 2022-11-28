@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(rcz.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin:auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.log{
+    width: 90px;
+    height:10vh;
+    cursor: pointer;
+    border-radius:80%;
+    padding-left: 35px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+   position: relative; 
+}
+
+.navbar ul li a{
+   text-decoration: none;
+   color: #fff;
+   text-transform: uppercase;
+   font-family: 'Courier New', Courier;
+}
+
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width:100%;
+    background: rgba(255, 255, 255, 0.495);
+    position: absolute;
+    bottom:0;
+    left: 0;
+    transition: .5s;
+}
+
+
+
+a:hover{
+	border: 1px solid rgba(255, 255, 255, 0.11);
+    background: rgba(255, 255, 255, 0.11);
+	transition: .5s;
+}
+
+#pizza a:hover{
+    border: none;
+    background: none;
+	
+}
+
+form a:hover{
+    border: none;
+    background: none;
+
+}
+
+
+
+.nav a:hover{
+    border: none;
+    background: none;
+    background-color: none;
+}
+
+    
+
+ #G-pizza{
+    text-align: center;
+    width: 50%;
+    color: #fff;
+    float: right;
+}
+
+table{
+   width: 50%;
+}
+
+#G-pizza h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+   
+}
+
+.content{
+    height: 20%;
+}
+
+
+.content #pizza{
+    width: 20%;
+    float: right;
+    top:15%;
+    text-align: center;
+    color: #fff;
+    padding-left: 25px;
+}
+
+.content #pizza h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.content #pizza p{
+    line-height: 25px;
+    font-family: 'Courier New', Courier, monospace ,'Trebuchet MS',sans-serif;
+}
+
+table img{
+    border-radius: 100px;
+}
+
+
+
+
+
+button{
+    text-transform: uppercase;
+    width:40%;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #e97b13ef;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: rgba(255, 255, 255, 0.11); 
+    width:0;
+    height:100%;
+    border-radius:25px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    transition:0.5s;
+}
+
+button:hover span{
+    width:100%; 
+}
+
+button:hover{
+    border:none;
+}
+
+
+/* Registration form css */
+.regform{
+    width: 70%;
+    background-color: rgba(255,255,255,0.5);
+    margin: auto;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+.regform h1{
+   text-transform: uppercase;
+}
+.lol{
+    height: 89.4%;
+}
+
+.fom{
+    background-color: rgba(255,255,255,0.1);
+    width: 70%;
+     border-radius:  0 0 15px 15px;
+    margin: auto;
+}
+form{
+    padding:10px;
+}
+#name{
+    width: 100%;
+    height: 100px;
+}
+.name{
+    margin-left:10%;
+    margin-top: 5%;
+    color:white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.firstname{
+    position: relative;
+    left: 27%;
+    top: 42;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    width:25%;
+}
+
+.lastname{
+    position: relative;
+    left: 55%;
+  
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+ width:25%;
+}
+
+.firstlabel{
+    position: relative;
+    color:#fff;
+    text-transform:uppercase;
+    font-size: 15px;
+    left:32%;
+    top:-45px;
+    font-weight: bold;
+}
+
+.lastlabel{
+    position: relative;
+    color:#fff;
+    text-transform:uppercase;
+    font-size: 15px;
+    left:63%;
+    top:-75px;
+    font-weight: bold;
+}
+
+.email{
+
+    position: relative;
+    left: 26.7%;
+    
+    line-height: 40px;
+    width: 57.5%;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+
+}
+
+.number{
+    position: relative;
+    left: 26.7%;
+  
+    line-height: 40px;
+    width: 57.5%;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+.adresse{
+
+    position: relative;
+    left: 26.7%;
+    
+    line-height: 40px;
+    width: 57.5%;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+
+}
+.radio{
+    position: relative;
+    left: 25%;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.alciusol{
+    margin-left:80px;
+    margin-top: 30px;
+    color:white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sel{
+    position: relative;
+    left: 25%;
+    width: 25%;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.selec{
+    position: relative;
+    left: 25%;
+    width: 25%;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.numbe{
+    position: relative;
+    left: 25%;
+    line-height: 40px;
+    width: 55%;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+form .grenn button{
+ left:35%;  
+ width:20%; 
+}
+
+
+
+/* Cmmande  css */
+
+
+.items{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    padding: 30px 20px;
+    grid-row-gap:30px;
+}
+
+.item img{
+    width:90%;
+    height:200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .4s ease;
+    border: 2px solid white;
+} 
+
+.item img:hover{
+    transform: scale(1.04);
+}
+
+.item p{
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.maison{
+    text-align: center;
+    color: #fff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.item a{
+    text-decoration: none;
+}
+
+.item button{
+    padding: 5px 30px;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: .3s all;
+}
+.item button:hover{
+    transform: scale(1.04);
+}
+
+figcaption{
+    color:#fff;
+    font-size: small;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+@media screen and (max-width:1000px) {
+    .items{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+    
+}
+
+@media screen and (max-width:770px) {
+    .items{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    .ligne1{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .items{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+
+    .navbar{
+        background-color: rgba(255, 187, 0, 0.274);
+        width: 100%;
+    }
+
+    
+
+    .ligne1{
+        width: 100%;
+      
+    }
+    
+}
+
+footer{
+   
+    background-color: rgba(255, 255, 255, 0.384);
+ 
+}
+
+.me{
+    text-transform:uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(224, 150, 150);
+}
+
+table tr{
+ margin: 10px 10px;
+}
+
+
+.pied{
+    display: flex;
+}
+
+footer p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}
+
+hr{
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+.ligne1{
+   width: 30%;
+   padding: 0 25px;
+
+}
+
+.ligne1 ul{
+    list-style: none;
+  
+}
+
+.ligne1 a{
+    text-decoration: none;
+    color: #fff;
+    font-family:  'Courier New', Courier;
+}
+
+.ligne1 h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 500;
+    position: relative;
+    font-family:  'Courier New', Courier , monospace;
+}
+
+.fab li{
+    display: inline;
+    padding:0  15px;
+ 
+}
+
+.fab a:hover{
+    border: none;
+}
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+

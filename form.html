@@ -1,0 +1,280 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alc_form_page</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet"   type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+             $("#fname_error_message").hide();
+             $("#sname_error_message").hide();
+             $("#email_error_message").hide();
+             $("#adresse_error_message").hide();
+             $("#telephone_error_message").hide();
+             $("#area_error_message").hide();
+
+             var error_fname = false;
+             var error_sname = false;
+             var error_email = false;
+             var error_adresse = false;
+             var error_telephone= false;
+             var error_area= false;
+
+          
+
+             $(".firstname").focusout(function(){
+                 check_firstname();
+             });
+
+             $(".lastname").focusout(function(){
+                 check_lastname();
+             });
+
+             $(".email").focusout(function(){
+                 check_email();
+             });
+
+             $(".adresse").focusout(function(){
+                 check_adresse();
+             });
+
+             $(".number").focusout(function(){
+                 check_telephone();
+             });
+
+             $(".numbe").focusout(function(){
+                 check_area();
+             });
+
+             function check_firstname(){
+                 var pattern = /^[a-zA-Z]*$/;
+                 var fname = $(".firstname").val();
+                 if(pattern.test(fname) && fname !== ''){
+                     $("#fname_error_message").hide();
+                     $(".firstname").css("border","2px solid #34F458");
+                 } else{
+                    $("#fname_error_message").html("Should contain only characters");
+                    $("#fname_error_message").show();
+                    $(".firstname").css("border","2px solid #F90A0A");
+                    error_fname = true;
+                 }
+             }
+
+             function check_lastname(){
+                 var pattern = /^[a-zA-Z]*$/;
+                 var sname = $(".lastname").val();
+                 if(pattern.test(sname) && sname !== ''){
+                     $("#sname_error_message").hide();
+                     $(".lastname").css("border","2px solid #34F458");
+                 } else{
+                    $("#sname_error_message").html("Should contain only characters");
+                    $("#sname_error_message").show();
+                    $(".lastname").css("border","2px solid #F90A0A");
+                    error_sname = true;
+                 }
+             }
+              
+             function check_email(){
+                 var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                 var email = $(".email").val();
+                 if(pattern.test(email) && email !== ''){
+                     $("#email_error_message").hide();
+                     $(".email").css("border","2px solid #34F458");
+                 } else{
+                    $("#email_error_message").html("Invalid Email");
+                    $("#email_error_message").show();
+                    $(".email").css("border","2px solid #F90A0A");
+                    error_email = true;
+                 }
+             }
+
+             function check_adresse(){
+                 var pattern = /^[a-zA-Z]*$/;
+                 var adres = $(".adresse").val();
+                 if(pattern.test(adres) && adres !== ''){
+                     $("#adresse_error_message").hide();
+                     $(".adresse").css("border","2px solid #34F458");
+                 } else{
+                    $("#adresse_error_message").html("Invalid Adresse");
+                    $("#adresse_error_message").show();
+                    $(".adresse").css("border","2px solid #F90A0A");
+                    error_adresse = true;
+                 }
+             }
+
+             function check_telephone(){
+                 var pattern = /^[+]+[0-9]*$/;
+                 var tele = $(".number").val();
+                 if(pattern.test(tele) && tele!== ''){
+                     $("#telephone_error_message").hide();
+                     $(".number").css("border","2px solid #34F458");
+                 } else{
+                    $("#telephone_error_message").html("Invalid Adresse");
+                    $("#telephone_error_message").show();
+                    $(".number").css("border","2px solid #F90A0A");
+                    error_telephone = true;
+                 }
+             }
+
+             function check_area(){
+                 var pattern = /^[a-zA-Z]*$/;
+                 var area= $(".numbe").val();
+                 if(pattern.test(area) && area!== ''){
+                     $("#area_error_message").hide();
+                     $(".numbe").css("border","2px solid #F90A0A");
+                 } else{
+                    $("#area_error_message").html("Invalid Adresse");
+                    $("#area_error_message").show();
+                    $(".numbe").css("border","2px solid #34F458");
+                    error_area = true;
+                 }
+             }
+
+
+             $("#registe_form").submit(function(){
+                 
+                 error_fname = false;
+                 error_sname = false;
+                 error_email = false;
+                 error_adresse = false;
+                 error_telephone= false;
+                 error_area= false;
+                
+                   check_adresse();
+                   check_area();
+                   check_firstname();
+                   check_lastname();
+                   check_telephone();
+                   check_email();
+
+                   if(  error_fname === false && error_sname === false && error_email === false && error_adresse === false && error_area === true && error_telephone === false){
+                       alert("Registration Successfull");
+                       return true;
+                   } else{
+                       alert("Please fill the form Correctly");
+                       return false;
+                   }
+
+             });
+
+
+        });
+
+    </script>
+</head>
+<body>
+     <div class="banner">
+            <div class="navbar">
+                <div class="nav">
+                    <a href="Index.html"><img src="logpiz.jpg" alt="logo" class="log"></a>
+                </div>                 <ul>
+                     <li> <a href="Index.html" class="active"><i class="fa fa-home"></i>Acceuil</a></li>
+                     <li> <a href="commande.html">Commande</a></li>
+                     <li> <a href="house.html">pizzeria</a></li>
+                     <li> <a href="form.html">Form</a></li>
+                     <li> <a href="loisir.html">Loisir</a></li>
+                 </ul>
+            </div>
+         </div> 
+         
+         <div class="regform"> <h1>order form</h1></div>
+         <div class="fom">
+             <form id="registe_form">
+                  <div id="name">
+                      <h2 class="name">nom</h2>
+                      <input type="text" class="firstname" required="" name="first_name" placeholder="nom"> <br>
+                       <span class="error_form" id="fname_error_message"></span>
+                      <label class="firstlabel"> nom</label>
+                      <input type="text" required="" class="lastname" name="last_name" placeholder="prenom"> <br>
+                      <span class="error_form" id="sname_error_message"></span>
+                      <label class="lastlabel"> prenom</label>
+                  </div>
+
+                  <h2 class="name">email</h2>
+                  <input type="text" required="text" class="email" name="email">
+                  <span class="error_form" id="email_error_message"></span>
+                  <h2 class="name">telephone</h2>
+                  <input type="text"  required="text" class="number" name="telephone">
+                  <h2 class="name">Adresse</h2>
+                  <input type="text"  required="text" class="adresse" name="adresse">
+                  <span class="error_form" id="adresse_error_message"></span>
+                   <h2 class="name">Selectionnez votre sexe</h2>
+                   <label class="radio">
+                       <input type="radio" class="radio-one" name="me">
+                       <span class="checkmark"></span>
+                       Masculin
+                   </label>
+
+                   <label class="radio">
+                    <input type="radio" class="radio-two"  name="me" checked="checked">
+                    <span class="checkmark"></span>
+                    Feminin
+                  </label>
+                  <h2 class="alciusol"> pizza et taille</h2>
+                <select class="sel">
+                    <option value="VEGGIE">VEGGIE</option>
+                    <option value="PIZZA ITALIENNE ">pizza ITALIENNE</option>
+                    <option value="MEATZA">MEATZA</option>
+                        <option value="CHICKEN PIZZA">CHICKEN PIZZA</option>
+                    <option value="3 CHEESE PIZZA ">CHEESE PIZZA</option>
+                    <option value="BACON CHEESE BURGER">BACON CHEESE BURGER</option>
+                        <option value="PEPPERONI FEAST">PEPPERONI FEAST</option>
+                    <option value="DELUXE ">DELUXE</option>
+                    <option value="DELUXE ">AMERICAN CHEESE</option> 
+                </select>
+                <select class="selec">
+                    <option value="Small">Small</option>
+                    <option value="Medium ">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+
+                <h2 class="alciusol"> qu'est-ce-que vous ne voulez pas dans votre pizza?</h2>
+                    <label for="choix"></label>
+                    <textarea class="numbe"  required="text"></textarea>
+                    <span class="error_form" id="area_error_message"></span>
+                 <div class="grenn">
+                      <button type="reset"> <span></span> Reset</button>
+                    <button type="submit"> <span></span> Send</button>
+                 </div>
+             </form>
+            </div>
+    
+         <footer>
+            <div class="pied">
+              <div class="ligne1">
+                  <h4>Compagnie</h4>
+                  <ul>
+                   <li> <a href="">A propos</a></li>
+                   <li> <a href="">Nos services</a></li>
+                   <li> <a href=""> Privacy policy</a></li>
+                  </ul>
+              </div>
+    
+              <div class="ligne1">
+                       <h4>help</h4>
+                       <ul>
+                           <li> <a href="">FAQ</a></li>
+                           <li> <a href="">order status</a></li>
+                           <li> <a href="">payment option</a></li> 
+                       </ul>
+               </div>
+              <div class="ligne1">
+                  <h4> Contact us</h4>
+                  <ul class="fab">
+               
+                    <li> <a href="mailto:alciusolguens@gmail.com"> <i class="fa fa-envelope"></i></a></li> 
+                    <li> <a href="www.facebook.com/alciusolguens"> <i class="fab fa-facebook"></i></a></li> 
+                    <li> <a href="tel:+50948477253"> <i class="fa fa-phone-alt"></i></a></li>
+                    <li> <a href="https://www.linkedin.com/in/alcius-olguens-168862181/"> linkedIn<i class="fab fa-linkedin"></i></a></li> 
+                 </ul>
+              </div>
+            </div>
+            <hr>
+            <p>  Copyright <i class="fa fa-copyright"></i> 2020  All rights reserved To Ing <strong> ALCIUS OLGUENS</strong>  </p>
+        </footer>
+</body>
+</html>
