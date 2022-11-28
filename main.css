@@ -8,7 +8,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(rcz.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(pizza1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -104,13 +104,14 @@ table{
 }
 
 .content{
-    height: 20%;
+    width: 20%;
+    float: right;
+    margin-right:20%;
 }
 
 
 .content #pizza{
-    width: 20%;
-    float: right;
+    
     top:15%;
     text-align: center;
     color: #fff;
